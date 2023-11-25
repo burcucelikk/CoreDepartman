@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_SideBarLayout.cshtml";
+}
+@model Departman
+
+<div class="container">
+    <div style="margin-left:25%">
+        <div class="w3-container">
+            <div class="row">
+                <div class="col-10 mb-4">
+                    <form class="form-group" asp-controller="Departman" asp-action="Ekle" method="post"> <br />
+                        <input type="text" name="Ad" placeholder="Kategori Adı" />
+                        <br /> <br />
+                        <button type="submit" class="btn btn-info">Departman Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+

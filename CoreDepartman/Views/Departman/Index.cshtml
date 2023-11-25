@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SideBarLayout.cshtml";
+}
+@model List<Departman>
+<div style="margin-left:25%">
+    <div class="w3-container">
+        <table class="m-3 table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Departman</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+                <th>Detaylar</th>
+            </tr>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.Id</th>
+                        <th>@item.Ad</th>
+                        <th>
+                            <a class="btn btn-outline-warning" asp-controller="Departman" asp-action="Guncelle" asp-route-id="@item.Id"> Güncelle </a>
+                        </th>
+                        <th>
+                            <a class="btn btn-outline-danger" asp-controller="Departman" asp-action="Sil" asp-route-id="@item.Id"> Sil </a>
+                        </th>
+                        <th>
+                            <a class="btn btn-outline-secondary" asp-controller="Departman" asp-action="Detaylar" asp-route-id="@item.Id"> Detaylar </a>
+                        </th>
+                    </tr>
+                }
+            }
+        </table>
+        <a class="btn btn-outline-primary" asp-controller="Departman" asp-action="Ekle"> Yeni Departman Ekle </a>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<header>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Menüler</h3>
+        <a class="w3-bar-item w3-button" asp-controller="Departman" asp-action="Index">Departmanlar</a>
+        <a class="w3-bar-item w3-button" asp-controller="Personel" asp-action="Index">Personeller</a>
+        <a class="w3-bar-item w3-button">Hakkımızda</a>
+        <a class="w3-bar-item w3-button" >Çıkış</a>
+    </div>
+</header>
+<body>
+    <div>
+         @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+</body>
+</html>

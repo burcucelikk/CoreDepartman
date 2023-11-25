@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Güncelle";
+    Layout = "~/Views/Shared/_SideBarLayout.cshtml";
+}
+@model Departman
+
+@{
+    var item = Model;
+}
+<div class="container">
+    <div style="margin-left:25%">
+        <div class="w3-container">
+            <div class="row">
+                <form asp-action="Guncelle" asp-route-id="@item.Id" method="post">
+                    <div class="col-12">
+                        <b>Departman Id</b>
+                        <input class="w-100" type="text" name="Id" value="@item.Id" />
+                    </div>
+                    <br />
+                    <div class="col-12">
+                        <b>Departman Adı</b>
+                        <input class="w-100" type="text" name="Ad" value="@item.Ad" />
+                    </div>
+                    <br />
+
+                    <button class="btn btn-info" type="submit">Güncelle</button>
+                </form>
+
+            </div>
+            <br />
+        </div>
+    </div>
+</div>

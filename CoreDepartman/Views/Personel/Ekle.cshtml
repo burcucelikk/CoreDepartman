@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_SideBarLayout.cshtml";
+}
+@model Personel
+
+<div class="container">
+    <div style="margin-left:25%">
+        <div class="w3-container">
+            <div class="row">
+                <div class="col-10 mb-4">
+                    <form class="form-group" asp-controller="Personel" asp-action="Ekle" method="post">
+                        <br />
+                        <input class="form-control" type="text" name="Ad" placeholder="Ad" /> <br /> <br />
+                        <input class="form-control" type="text" name="Soyad" placeholder="Soyad" /> <br /> <br />
+                        <input class="form-control" type="text" name="Sehir" placeholder="Sehir" /> <br /> <br />
+                        <select class="form-control" asp-items="@ViewBag.Degerler" asp-for="DepartmanId"></select> <br /> <br />
+                        <button type="submit" class="btn btn-info">Personel Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
